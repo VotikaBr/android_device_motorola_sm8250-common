@@ -10,7 +10,7 @@ persist.backup.ntpServer="0.pool.ntp.org"
 persist.vendor.btstack.aac_frm_ctl.enabled=true
 
 # Camera
-persist.vendor.camera.privapp.list=org.codeaurora.snapcam
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.motorola.camera3
 
 # Coresight
 persist.debug.coresight.config=stm-events
@@ -123,3 +123,9 @@ telephony.lteOnCdmaDevice=1
 
 # Time Services
 persist.timed.enable=true
+
+
+# About Phone Definitions
+ro.product.marketname=Motorola Edge 20 Pro
+ro.infinity.soc=Snapdragon 870 5G
+ro.infinity.camera=108MP + 16MP + 8MP

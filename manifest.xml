@@ -812,6 +812,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <fqname>@2.0::ICameraDesktop/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>motorola.hardware.camera.imgtuner</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IImageTuning</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IImageTuning/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.zui.hardware.ifaa</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
