@@ -73,13 +73,15 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # Partitions
-PRODUCT_PACKAGES += \
-    vendor_bt_firmware_mountpoint \
-    vendor_dsp_mountpoint \
-    vendor_firmware_mnt_mountpoint \
-    vendor_fsg_mountpoint \
-    vendor_super_fsg_mountpoint \
-    vendor_super_modem_mountpoint
+# Create mountpoint directories via marker files to avoid Ninja directory outputs.
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/mountpoint.placeholder:$(TARGET_COPY_OUT_VENDOR)/bt_firmware/.mountpoint \
+    $(LOCAL_PATH)/configs/mountpoint.placeholder:$(TARGET_COPY_OUT_VENDOR)/dsp/.mountpoint \
+    $(LOCAL_PATH)/configs/mountpoint.placeholder:$(TARGET_COPY_OUT_VENDOR)/firmware_mnt/.mountpoint \
+    $(LOCAL_PATH)/configs/mountpoint.placeholder:$(TARGET_COPY_OUT_VENDOR)/fsg/.mountpoint \
+    $(LOCAL_PATH)/configs/mountpoint.placeholder:$(TARGET_COPY_OUT_VENDOR)/super_fsg/.mountpoint \
+    $(LOCAL_PATH)/configs/mountpoint.placeholder:$(TARGET_COPY_OUT_VENDOR)/super_modem/.mountpoint
+
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
